@@ -4,14 +4,19 @@
       <div class="container-header">
         <section class="lf">
           <div class="head"></div>
-          <span class="name">李枫</span>
-          <span class="name name-en">Open your journey !</span>
+          <span class="name name-cn">千寻瀑</span>
+          <span class="name name-en">Open Your Journey !</span>
+          <div class="contactMe">
+            <span v-for="(item,index) in contact" :key="index" class="ctM">
+                <i :class="item.url"></i>
+            </span>
+          </div>
         </section>
       </div>
     </div>
-    <id id="container">
+    <div id="container">
       <router-view></router-view>
-    </id>
+    </div>
   </div>
 </template>
 
@@ -20,22 +25,22 @@
         data(){
             return{
                 activeIndex2: '1',
-                nav:[
+                nav:"",
+                contact:[
                   {
-                    index:"/",
-                    title:"首页"
+                    url:"iconfont icon-GitHub"
                   },
                   {
-                    index:"/home",
-                    title:""
+                    url:"iconfont icon-QQ"
                   },
                   {
-                    index:"/home",
-                    title:"首页"
+                    url:"iconfont icon-weixin"
                   },
                   {
-                    index:"/home",
-                    title:"首页"
+                    url:"iconfont icon-weibo"
+                  },
+                  {
+                    url:"iconfont icon-youxiang"
                   },
                 ]
             }
@@ -60,7 +65,7 @@
     height: 100%;
   }
   #header{
-    background: url('./assets/images/header.jpg') no-repeat;
+    background: url('../public/images/header.jpg') no-repeat;
     background-size: 100% 100%;
     position: fixed;
     left: 0;
@@ -79,7 +84,7 @@
         margin: auto;
         background-color: #fff;
         border-radius: 50%;
-        background: url('./assets/images/headImg.jpg') no-repeat;
+        background: url('../public/images/headImg.jpg') no-repeat;
         background-size: 100% 100%;
 
       }
@@ -89,11 +94,40 @@
         text-align: center;
         display: block;
         width: 100%;
+      }
+      .name-cn{
         margin-top: 8px;
-        font-family: "微软雅黑";
+        font-family: "楷体";
       }
       .name-en{
+        margin-top: 3px;
         font-size: 1.0rem;
+      }
+      .contactMe{
+        padding-top: 30px;
+        text-align: center;
+        .ctM{
+          transition: background-color 0.7s;
+          display: inline-block;
+          width: 35px;
+          height: 35px;
+          margin: 0 10px;
+          border-radius: 50%;
+          overflow: hidden;
+          border: 1px solid #ccc;
+          &:hover{
+            background-color:#fff;
+            .iconfont{
+              color:#000;
+            }
+          }
+          .iconfont{
+            transition: color 0.6s;
+            color:#fff;
+            font-size: 20px;
+            line-height: 35px;
+          }
+        }
       }
     }
   }
