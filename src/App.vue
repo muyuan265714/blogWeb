@@ -4,8 +4,8 @@
       <div class="container-header">
         <section class="lf">
           <div class="head"></div>
-          <span class="name">一顾终年</span>
-          <span class="name name-en">Yves</span>
+          <span class="name">李枫</span>
+          <span class="name name-en">Open your journey !</span>
         </section>
       </div>
     </div>
@@ -85,7 +85,7 @@
       }
       .name{
         color: #ddd;
-        font-size: 1.8rem;
+        font-size: 1.6rem;
         text-align: center;
         display: block;
         width: 100%;
@@ -93,7 +93,7 @@
         font-family: "微软雅黑";
       }
       .name-en{
-        font-size: 1.2rem;
+        font-size: 1.0rem;
       }
     }
   }
