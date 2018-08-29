@@ -11,6 +11,12 @@
                 <i :class="item.url"></i>
             </span>
           </div>
+          <div id="copyright">
+            <a href="http://www.miitbeian.gov.cn">
+              豫ICP备17043726号
+            </a>
+            Copyright © 2017-2018 lfgym.com. All Rights Reserved.
+          </div>
         </section>
       </div>
     </div>
@@ -46,12 +52,16 @@
             }
         },
         methods:{
-
+          
         }
     }
 </script>
 
 <style lang="less">
+.el-button{
+  padding-top: 15px;
+  padding-bottom: 15px;
+}
   body{
     position: absolute;
     top: 0;
@@ -65,7 +75,7 @@
     height: 100%;
   }
   #header{
-    background: url('../public/images/header.jpg') no-repeat;
+    background: url('./assets/images/header.jpg') no-repeat;
     background-size: 100% 100%;
     position: fixed;
     left: 0;
@@ -84,7 +94,7 @@
         margin: auto;
         background-color: #fff;
         border-radius: 50%;
-        background: url('../public/images/headImg.jpg') no-repeat;
+        background: url('./assets/images/headImg.jpg') no-repeat;
         background-size: 100% 100%;
 
       }
@@ -107,6 +117,7 @@
         padding-top: 30px;
         text-align: center;
         .ctM{
+          cursor: pointer;
           transition: background-color 0.7s;
           display: inline-block;
           width: 35px;
@@ -135,6 +146,19 @@
     float: right;
     width: 60%;
     height: 100%;
+  }
+  #copyright{
+    position: absolute;
+    bottom: 30px;
+    color: #ddd;
+    text-align: center;
+    width: 100%;
+    >a{
+      display: block;
+      color:#ddd;
+      text-decoration: none;
+      margin-bottom: 3px;
+    }
   }
 </style>
 
