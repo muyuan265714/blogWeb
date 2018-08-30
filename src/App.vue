@@ -16,7 +16,7 @@
               豫ICP备17043726号
             </a>
             Copyright © 2017-2018 lfgym.com. All Rights Reserved.
-          </div>
+          </div>  
         </section>
       </div>
     </div>
